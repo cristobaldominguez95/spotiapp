@@ -38,6 +38,10 @@ hr {
   border-radius: 100%;
 }
 
+.top30 {
+  margin-top: 30px;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
