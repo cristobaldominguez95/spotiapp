@@ -7,14 +7,14 @@ import 'rxjs/add/operator/map';
 export class SpotifyService {
 
   private baseUrl: string = 'https://api.spotify.com';
-  private token: 'BQDHVNV2_AcAYVBbFytmzSC9rfJVvs_Zyp4gBSyX76g5A0GD-nPr_HenJ9_6mjS5WKac1MK3hvL_ue-4Xro';
+  private token: string = 'BQDgTrDZ4YGPWyoKy_XyS9OkZwJvyeHYmIhbWI-TCjn2IepXINsd1pOlmAhiTGQqKWcNZT8rOdDMDD3cVi8';
 
   constructor(private httpClient: HttpClient) {
     console.log('servicio funcionando');
   }
 
-  getArtists() {
-    let url = `${this.baseUrl}/v1/search?query=Metallica&type=artist&limit=20`;
+  getArtists(artist: string) {
+    let url = `${this.baseUrl}/v1/search?query=${artist}&type=artist&limit=20`;
     let headers = new HttpHeaders({
       Authorization: `Bearer ${this.token}`
     });

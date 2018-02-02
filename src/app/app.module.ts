@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SpotifyService } from './services/spotify.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     SpotifyService

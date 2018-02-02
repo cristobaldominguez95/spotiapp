@@ -1,5 +1,15 @@
-<div class="animated fadeIn fast">
-  <p>
-    search works!
-  </p>
+<div class="container top30 animated fadeIn">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="search">Search artist</label>
+      <input [(ngModel)]="search" (keyup)="searchArtist()" type="text" id="search" placeholder="Search artist..." class="form-control">
+    </div>
+    <div class="col-md-9" *ngIf="search.length > 0">
+      <h1 class="text-capitalize">{{ search }}</h1>
+      <hr>
+      <ul>
+        <li *ngFor="let artist of artists">{{ artist.name }}</li>
+      </ul>
+    </div>
+  </div>
 </div>
