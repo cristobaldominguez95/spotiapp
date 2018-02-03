@@ -38,6 +38,10 @@ hr {
   border-radius: 100%;
 }
 
+.img-small {
+  width: 50px;
+}
+
 .top30 {
   margin-top: 30px;
 }

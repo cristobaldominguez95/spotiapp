@@ -1,3 +1,29 @@
-<p>
-  artist works!
-</p>
+<div class="container animated fadeIn top30">
+  <div class="row">
+    <div class="col-md-3">
+      <img [src]="artist.images | noimage" [alt]="artist.name" class="img-thumbnail">
+    </div>
+    <div class="col-md-9">
+      <h1>{{ artist.name }}</h1>
+      <hr>
+      <a [routerLink]="['/search']" class="btn btn-outline-danger">Go back</a>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="top30">Top tracks</h1>
+    <table class="table">
+      <tr *ngFor="let topTrack of topTracks; let index = index">
+        <td class="align-middle">{{ index + 1 }}.</td>
+        <td>
+          <img [src]="topTrack.album.images | noimage" [alt]="topTrack.name" class="img-small">
+        </td>
+        <td class="align-middle">
+          {{ topTrack.name }}
+        </td>
+        <td class="align-middle">
+          <audio [src]="topTrack.preview_url" controls></audio>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
