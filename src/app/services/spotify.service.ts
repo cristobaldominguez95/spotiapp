@@ -7,11 +7,9 @@ import 'rxjs/add/operator/map';
 export class SpotifyService {
 
   private baseUrl: string = 'https://api.spotify.com';
-  private token: string = 'BQDgTrDZ4YGPWyoKy_XyS9OkZwJvyeHYmIhbWI-TCjn2IepXINsd1pOlmAhiTGQqKWcNZT8rOdDMDD3cVi8';
+  private token: string = 'BQB286kvt_rd743M0n6N2UCGOplgZ0s1KvGvopOuPl-bTPkhNGNMyTshokozlR3esPpjn7AUpIH1_qP4t48';
 
-  constructor(private httpClient: HttpClient) {
-    console.log('servicio funcionando');
-  }
+  constructor(private httpClient: HttpClient) { }
 
   getArtists(artist: string) {
     let url = `${this.baseUrl}/v1/search?query=${artist}&type=artist&limit=20`;
