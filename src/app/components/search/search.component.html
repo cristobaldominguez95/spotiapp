@@ -7,9 +7,12 @@
     <div class="col-md-9" *ngIf="search.length > 0">
       <h1 class="text-capitalize">{{ search }}</h1>
       <hr>
-      <ul>
-        <li *ngFor="let artist of artists">{{ artist.name }}</li>
-      </ul>
+      <div class="row">
+        <div *ngFor="let artist of artists" [routerLink]="['/artist', artist.id]" class="col-md-3 text-center pointer">
+          <img [src]="artist.images | noimage" class="img-thumbnail">
+          <a routerLinkActive="router-link-active" ><p>{{ artist.name }}</p></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

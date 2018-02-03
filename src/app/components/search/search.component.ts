@@ -19,7 +19,6 @@ export class SearchComponent {
     this.spotifyService.getArtists(this.search).subscribe(data => {
       this.artists = data;
     });
-
   }
 
 }
